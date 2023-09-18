@@ -1,0 +1,89 @@
+/* Estilos para el contenedor de la página de inicio */
+.home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Estilos para el título */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el carrusel de productos */
+  .product-carousel {
+    max-width: 600px; /* Personaliza el ancho máximo según tus necesidades */
+    margin: 0 auto;
+  }
+  
+  /* Estilos para cada diapositiva del carrusel */
+  .product-slide {
+    background-color: #f0f0f0; /* Fondo de las diapositivas */
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para las imágenes de productos en el carrusel y la lista de productos */
+  .product-image {
+    width: 200px; /* Ancho fijo para todas las imágenes de productos */
+    height: 200px; /* Altura fija para todas las imágenes de productos */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin distorsionarla */
+  }
+  
+  /* Estilos para los nombres de productos */
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  /* Estilos para los precios de productos */
+  .product-price {
+    font-size: 16px;
+    color: #333;
+  }
+
+
+
+
+  
+
+/* Estilos para el contenedor principal de los detalles del producto */
+.product-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Estilos para la imagen del producto */
+  .product-image {
+    max-width: 300px; /* Tamaño máximo de la imagen */
+    height: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Borde alrededor de la imagen */
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el nombre del producto */
+  .product-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para la descripción del producto */
+  .product-description {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para la categoría del producto */
+  .product-category {
+    font-size: 18px;
+    font-style: italic;
+  }
+  
+
+  
