@@ -2,6 +2,7 @@
 .home-container {
     text-align: center;
     padding: 20px;
+    background-color: #6E7076;
   }
   
   /* Estilos para el título */
@@ -15,19 +16,20 @@
     max-width: 600px; /* Personaliza el ancho máximo según tus necesidades */
     margin: 0 auto;
   }
-  
+  .fondocarrusel{
+    background-color: white;
+  }
   /* Estilos para cada diapositiva del carrusel */
   .product-slide {
-    background-color: #f0f0f0; /* Fondo de las diapositivas */
-    padding: 20px;
-    border-radius: 5px;
+    width: 500px; /* Ancho fijo para el contenedor del carrusel */
+    height: 500px; 
   }
   
   /* Estilos para las imágenes de productos en el carrusel y la lista de productos */
   .product-image {
-    width: 200px; /* Ancho fijo para todas las imágenes de productos */
-    height: 200px; /* Altura fija para todas las imágenes de productos */
-    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin distorsionarla */
+    width: 500PX;
+    height: 500px;
+    object-fit: contain;
   }
   
   /* Estilos para los nombres de productos */

@@ -15,8 +15,10 @@ const Home = () => {
       
       <Carousel className="product-carousel">
         {productos.slice(0, 3).map((product) => (
+          <div className='fondocarrusel'>
           <div key={product.id} className="product-slide">
             <img src={product.image} alt={product.name} className="product-image" />
+          </div>
           </div>
         ))}
       </Carousel>
