@@ -8,14 +8,19 @@ const Productos = () => {
 
   return (
     <div className="home-container">
-      <h1>Seleccion de auriculares</h1>
+      <div className='TituloProducto'>
+        <br></br>
+      <h1>Nuestra seleccion de auriculares</h1>
+      <br></br>
+      </div>
       <div className="product-list">
         {productos.map((product) => (
-          <div key={product.id} className="product"><Link to={`/Producto/${product.id}`}>
-            <img src={product.image} alt={product.name} className="product-image" />
-            <p className="product-name">{product.name}</p>
+          <div key={product.id} className="product">
+            <img src={product.image} alt={product.name} className="product-image2" />
+            <br></br><br></br>
+            <div className='Link'><Link to={`/Producto/${product.id}`}><button><p className="product-name">{product.name}</p></button></Link></div>
             <p className="product-price">Precio: ${product.price}</p>
-          </Link></div>
+          </div>
         ))}
       </div>
     </div>
