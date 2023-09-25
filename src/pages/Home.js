@@ -8,11 +8,25 @@ import productos from "../productos.json";
 const Home = () => {
 
   return (
+    
     <div className="home-container">
+      
+      <div className="Titulo">
+      <br></br>
+      <br></br>  
       <h1>Bienvenido a Nuestro E-commerce de auriculares</h1>
-      <Link to={`/Productos`}><h1>Ir a productos</h1></Link>
+      <br></br><br></br>
       
       
+     
+      </div>
+      <div className='Link'>
+      <br></br>
+      
+      <Link to={`/Productos`}><button><h1>Ir a productos</h1></button></Link>
+      
+      <br></br><br></br><br></br>
+      </div>
       <Carousel className="product-carousel">
         {productos.slice(0, 3).map((product) => (
           <div className='fondocarrusel'>
@@ -22,17 +36,25 @@ const Home = () => {
           </div>
         ))}
       </Carousel>
-
-      
+      <div className='Titulo'>
+        <br></br>
+      <h1>Productos Recomendados por la comunidad</h1>
+      <br></br>
+      </div>
       <div className="product-list">
+        
         {productos.map((product) => (
+          
           <div key={product.id} className="product">
-            <img src={product.image} alt={product.name} className="product-image" />
+            <br></br><br></br><br></br>
+            <img src={product.image} alt={product.name} className="product-imagePreview" />
             <p className="product-name">{product.name}</p>
-            <p className="product-price">Precio: ${product.price}</p></div>
+            <p className="product-price"><b>Precio: ${product.price}</b></p></div>
         ))}
       </div>
+      
     </div>
+    
   );
 };
 
