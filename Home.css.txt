@@ -1,0 +1,176 @@
+/* Estilos para el contenedor de la página de inicio */
+.home-container {
+    text-align: center;
+    
+    background-color: #ffffff;
+    
+  }
+  
+  /* Estilos para el título */
+  h1 {
+    font-size: 30 px;
+    text-decoration: underline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  /* Estilos para el carrusel de productos */
+  .product-carousel {
+    height: 500px; /* Altura fija para el carrusel */
+    
+  }
+  .fondocarrusel{
+    background-color: rgb(0, 0, 0);
+    
+  }
+  /* Estilos para cada diapositiva del carrusel */
+  .product-slide {
+    height: 500px; /* Altura fija para el contenedor de la imagen */
+  width: 100%; /* Ancho fijo para el contenedor de la imagen */
+  }
+  
+  /* Estilos para las imágenes de productos en el carrusel y la lista de productos */
+  .product-image {
+    max-height: 100%; /* Altura máxima del 100% para que la imagen no exceda el alto del contenedor */
+    max-width: 100%; /* Ancho máximo del 100% para que la imagen no exceda el ancho del contenedor */
+    object-fit: contain; /* Esto hará que la imagen mantenga su aspecto mientras se ajusta al tamaño del contenedor */
+  }
+  /* Estilos para los nombres de productos */
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    
+  }
+  
+  /* Estilos para los precios de productos */
+  .product-price {
+    font-size: 30px;
+    text-decoration: underline;
+    color: #1aaf37;
+  }
+
+
+/* Estilos para el contenedor principal de los detalles del producto */
+.product-details {
+    display: flex;
+
+    padding-left: -1px;
+    padding-top: 10px;
+    background-color: #09233e;
+    
+  }
+  
+  /* Estilos para la imagen del producto */
+  .product-image {
+    max-height: 100%; /* Altura máxima del 100% para que la imagen no exceda el alto del contenedor */
+    max-width: 100%; /* Ancho máximo del 100% para que la imagen no exceda el ancho del contenedor */
+    object-fit: scale-down; /* Esto hará que la imagen se redimensione para ajustarse al tamaño del contenedor, pero sin recortarla */
+}
+  
+  /* Estilos para el nombre del producto */
+  .product-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+  }
+  
+  /* Estilos para la descripción del producto */
+  .product-description {
+    font-size: 18px;
+    padding-left: 5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  /* Estilos para la categoría del producto */
+  .product-category {
+    font-size: 18px;
+    font-style: italic;
+    padding-left: 5px;
+  }
+  .product-image2 {
+    width: 200px; /* Aumentamos el tamaño de la imagen */
+    height: 200px;
+    background-color: #ffffff;
+    object-fit: cover; /* Aseguramos que la imagen cubra todo el espacio disponible sin deformarse */
+    border-radius: 50%; /* Hacemos que la imagen sea redonda */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Añadimos una sombra para darle profundidad */
+    transition: transform .2s; /* Animación suave para el efecto hover */
+}
+
+.product-image2:hover {
+    transform: scale(1.1); /* Al pasar el mouse sobre la imagen, esta se agranda un poco */
+}
+
+.product-imagePreview {
+  width: 200px; /* Ajustamos el tamaño de la imagen */
+  height: 200px;
+  object-fit: cover; /* Aseguramos que la imagen cubra todo el espacio disponible sin deformarse */
+  border: 3px solid #1877d6; /* Añadimos un borde sólido */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Añadimos una sombra para darle profundidad */
+  transition: all .5s ease-in-out; /* Animación suave para el efecto hover y el borde */
+}
+
+.product-imagePreview:hover {
+  transform: rotateY(180deg); /* Al pasar el mouse sobre la imagen, esta realiza una rotación de 180 grados en el eje Y */
+  border-color: #1877d6; /* Cambiamos el color del borde al pasar el mouse sobre la imagen */
+}
+
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #0c335a;
+}
+
+.product {
+  flex-basis: 45%;  
+}
+.Titulo{
+  background-color: #0c335a;
+}
+.Link{
+  background-color: #0c335a;
+
+}
+button{
+  color:#ffffff;
+  background-color: #09233e;
+  border-radius: 50px;
+}
+button:hover {
+  background-color: #1877d6; 
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+
+}
+
+.TituloProducto{
+  background-color: #0c335a;
+  text-decoration: underline;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.imagendetalle{
+  width: 500px;
+  height: 500px;
+}
+.product-imageDetalles {
+  width: 500px; /* Ajustamos el tamaño de la imagen */
+  height: 500px;
+  object-fit: cover; /* Aseguramos que la imagen cubra todo el espacio disponible sin deformarse */
+  border: 3px solid #1877d6; /* Añadimos un borde sólido */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Añadimos una sombra para darle profundidad */
+  transition: all .5s ease-in-out; /* Animación suave para el efecto hover y el borde */
+}
+
+.product-imageDetalles:hover {
+  transform: rotateY(180deg); /* Al pasar el mouse sobre la imagen, esta realiza una rotación de 180 grados en el eje Y */
+  border-color: #1877d6; /* Cambiamos el color del borde al pasar el mouse sobre la imagen */
+}
+.product-info{
+  background-color: #1877d6;
+  width:100%;
+  height: 505px;
+}
