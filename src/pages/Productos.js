@@ -19,11 +19,6 @@ const Productos = () => {
 
   return (
     <div className="home-container">
-      <div className='TituloProducto'>
-        <br></br>
-      <h1>Nuestra seleccion de auriculares</h1>
-      <br></br>
-      </div>
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product">

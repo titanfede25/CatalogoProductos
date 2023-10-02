@@ -23,15 +23,7 @@ const Home = () => {
     
     <div className="home-container">
       
-      <div className="Titulo">
-      <br></br>
-      <br></br>  
-      <h1>Bienvenido a Nuestro E-commerce de auriculares</h1>
-      <br></br><br></br>
-      
-      
      
-      </div>
       <div className='Link'>
       <br></br>
       
