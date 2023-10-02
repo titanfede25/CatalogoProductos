@@ -1,10 +1,21 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../Home.css'; // Asegúrate de importar tu archivo de estilos CSS personalizado aquí
-import productos from "../productos.json";
+//import productos from "../productos.json";
+import axios from 'axios'
 
 const Productos = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios.get('https://dummyjson.com/products')
+    .then((response)=> {
+      console.log(response.data.products);
+      setProducts(response.data.products);
+    })
+    .catch((error)=> {
+      console.log(error);
+    })}, [])
 
   return (
     <div className="home-container">
@@ -14,11 +25,11 @@ const Productos = () => {
       <br></br>
       </div>
       <div className="product-list">
-        {productos.map((product) => (
+        {products.map((product) => (
           <div key={product.id} className="product">
-            <img src={product.image} alt={product.name} className="product-image2" />
+            <img src={product.images[0]} alt={product.title} className="product-image2" />
             <br></br><br></br>
-            <div className='Link'><Link to={`/Producto/${product.id}`}><button><p className="product-name">{product.name}</p></button></Link></div>
+            <div className='Link'><Link to={`/Producto/${product.id}`}><button><p className="product-name">{product.title}</p></button></Link></div>
             <p className="product-price">Precio: ${product.price}</p>
           </div>
         ))}

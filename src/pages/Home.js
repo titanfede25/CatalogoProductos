@@ -1,11 +1,23 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import '../Home.css'; // Asegúrate de importar tu archivo de estilos CSS personalizado aquí
-import productos from "../productos.json";
+import '../Home.css'; 
+//import productos from "../productos.json";
+import axios from 'axios'
+
 
 const Home = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios.get('https://dummyjson.com/products')
+    .then((response)=> {
+      console.log(response.data.products);
+      setProducts(response.data.products);
+    })
+    .catch((error)=> {
+      console.log(error);
+    })}, [])
 
   return (
     
@@ -28,10 +40,10 @@ const Home = () => {
       <br></br><br></br><br></br>
       </div>
       <Carousel className="product-carousel">
-        {productos.slice(0, 3).map((product) => (
+        {products.map((product) => (
           <div className='fondocarrusel'>
           <div key={product.id} className="product-slide">
-            <img src={product.image} alt={product.name} className="product-image" />
+            <img src={product.images[0]} alt={product.title} className="product-image" />
           </div>
           </div>
         ))}
@@ -43,12 +55,12 @@ const Home = () => {
       </div>
       <div className="product-list">
         
-        {productos.map((product) => (
+        {products.map((product) => (
           
           <div key={product.id} className="product">
             <br></br><br></br><br></br>
-            <img src={product.image} alt={product.name} className="product-imagePreview" />
-            <p className="product-name">{product.name}</p>
+            <img src={product.images[0]} alt={product.title} className="product-imagePreview" />
+            <p className="product-name">{product.title}</p>
             <p className="product-price"><b>Precio: ${product.price}</b></p></div>
         ))}
       </div>
