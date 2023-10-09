@@ -9,8 +9,20 @@ export default function Layout() {
 
     return (
     <div className="">
-        <input id="." type="text" placeholder="Ingrese aquí la categoría que quieres buscar" onChange={()=>{setCategory(document.getElementById(".").value)}}></input>
-        <Link to={`/Resultado/${category}`}>Buscar categoria</Link>
+        <div className="Row">
+            <input id="." type="text" placeholder="Ingrese aquí la categoría que quieres buscar" onChange={()=>{setCategory(document.getElementById(".").value)}}></input>
+            <Link to={`/Resultado/${category}`}> <button>Buscar categoria</button></Link>
+        </div>
+        <div className="Row">
+            <p>categorias recomendadas:</p>
+            <Link to={`/Resultado/${"skincare"}`}><button>skincare</button></Link>
+            <Link to={`/Resultado/${"laptops"}`}><button>laptops</button></Link>
+            <Link to={`/Resultado/${"smartphones"}`}><button>smartphones</button></Link>
+            <Link to={`/Resultado/${"fragrances"}`}><button>fragrances</button></Link>
+            <Link to={`/Resultado/${"groceries"}`}><button>groceries</button></Link>
+            <Link to={`/Resultado/${"home-decoration"}`}><button>home-decoration</button></Link>
+        </div>
+        {/* NO FUNCIONA EL CONTEXT STATE
         <p>Productos seleccionados:</p>
         {console.log(contextState.productos)}
         {contextState?.productos.map((producto)=>{
@@ -19,11 +31,8 @@ export default function Layout() {
                     <p>{producto.title}</p>
                 </div>
             )
-        })}
+        })}*/}
         <Outlet />
     </div>
     );
 }
-
-
-

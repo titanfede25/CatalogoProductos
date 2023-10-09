@@ -23,7 +23,8 @@ export default function Producto() {
     return (
       <div className="product-details">
         <br></br>
-        <img src={producto.images[0]} alt={producto.title} className="product-imageDetalles" />
+        {/*NO FUNCIONAN LAS IMAGENES
+        <img src={producto.images[0]} alt={producto.title} className="product-imageDetalles" />*/}
         <div className="product-info">
           <h1 className="product-name">{`Nombre: ${producto.title}`}</h1>
           <p className="product-description">{`Descripción: ${producto.description}`}</p>

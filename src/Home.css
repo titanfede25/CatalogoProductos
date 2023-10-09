@@ -124,6 +124,11 @@
   background-color: #0c335a;
 }
 
+.Row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .product {
   flex-basis: 45%;  
 }
