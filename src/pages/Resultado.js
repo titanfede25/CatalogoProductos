@@ -3,26 +3,24 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../Home.css'; 
-import { useContextState } from "../ContextState.js";
 //import productos from "../productos.json";
 import axios from 'axios'
 
 const Resultado = () => {
   const [products, setProducts] = useState([]);
-  const { contextState, setContextState } = useContextState();
+  const { categoria } = useParams();
+
   useEffect(() => {
-    console.log(contextState.categoria)
-    axios.get('https://dummyjson.com/products/category/' + contextState.categoria)
-    .then((response)=> {
-      console.log(response.data.products);
-      setProducts(response.data.products);
-    })
-    .catch((error)=> {
-      console.log(error);
-    })}, [])
+    axios.get('https://dummyjson.com/products/category/' + categoria)
+      .then((response)=> {
+        setProducts(response.data.products);
+      })
+      .catch((error)=> {
+        console.log(error);
+      });
+  }, [categoria]);
 
   return (
-    
     <div className="home-container">
       <div className='TituloProducto'>
       <br></br>
@@ -39,7 +37,6 @@ const Resultado = () => {
         ))}
       </div>
     </div>
-    
   );
 };
 

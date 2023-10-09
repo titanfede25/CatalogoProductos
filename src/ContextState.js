@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 
 export const initialState = {
-    categoria: ""
+    productos:[]
 };
 
 export const ActionTypes = {
-  setCategoria: "SET_CATEGORIA"
+  setProductos: "SET_PRODUCTOS"
 };
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ActionTypes.setCategoria: {
-      return { ...state, categoria: action.newValue};
+    case ActionTypes.setProductos: {
+      return { ...state, productos: [...state.productos + action.newValue]};
     }
     default: {
       return state;

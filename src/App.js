@@ -9,11 +9,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route index element={<Home />} />
       <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
           <Route path="/Producto/:id" element={<Producto />} />
           <Route path="/Productos" element={<Productos />} />
-          <Route path="/Resultado" element={<Resultado />} />
+          <Route path="/Resultado/:categoria" element={<Resultado />} />
       </Route>
       </Routes>
     </BrowserRouter>
