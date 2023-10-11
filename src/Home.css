@@ -46,6 +46,7 @@
     font-size: 30px;
     text-decoration: underline;
     color: #ffffff;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
 
@@ -71,7 +72,7 @@
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
     
   }
   
@@ -79,7 +80,7 @@
   .product-description {
     font-size: 18px;
     padding-left: 5px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
   }
   
   /* Estilos para la categoría del producto */
@@ -125,9 +126,12 @@
 }
 
 .Row {
-  display: flex;
+  display:flex;
   align-items: center;
+  width: 100%;
   gap: 10px;
+  justify-content: center;
+  background-color: #09233e;
 }
 .product {
   flex-basis: 45%;  
@@ -179,3 +183,22 @@ button:hover {
   width:100%;
   height: 505px;
 }
+.CategoriasRecomendadas{
+  color: white;
+  font-size: 15px;
+  text-decoration:underline;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+input{
+  width: 500px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.input-style:focus {
+  background-color: lightblue;
+}
+
