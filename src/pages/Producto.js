@@ -1,40 +1,53 @@
 import React, {useEffect, useState} from "react";
 import { useParams, Link } from "react-router-dom";
-//import productos from "../productos.json";
 import axios from 'axios'
-import '../Home.css'; // Asegúrate de importar tu archivo de estilos CSS personalizado aquí
+import '../Home.css';
 import { useContextState } from "../ContextState.js";
 
 export default function Producto() {
   const { id } = useParams();
-  const [producto, setProduct] = useState([]);
+  const [producto, setProduct] = useState(null);
+  const [error, setError] = useState(null);
   const { contextState, setContextState } = useContextState();
   
   useEffect(() => {
     axios.get('https://dummyjson.com/products/' + id)
     .then((response)=> {
       setProduct(response.data);
+      console.log(response.data); // Verifica el objeto del producto
     })
     .catch((error)=> {
       console.log(error);
+      setError(error);
     })}, [])
 
-  if (producto) {
+  if (error) {
+    return <div>Ocurrió un error al obtener los datos del producto: {error.message}</div>;
+  } else if (producto) {
     return (
+        
+          
       <div className="product-details">
-        <br></br>
-        {/*NO FUNCIONAN LAS IMAGENES
-        <img src={producto.images[0]} alt={producto.title} className="product-imageDetalles" />*/}
+        
+      <br></br><br></br><br></br><br></br>
+        {producto.images && producto.images[0] ? <img src={producto.images[0]} alt={producto.title}/> : <p>No se encontró la imagen del producto</p>}
         <div className="product-info">
-          <h1 className="product-name">{`Nombre: ${producto.title}`}</h1>
+          <h1 className="product-name2">{`${producto.title}`}</h1>
           <p className="product-description">{`Descripción: ${producto.description}`}</p>
           <p className="product-category">{`Categoría: ${producto.category}`}</p>
-          <Link to={`/Productos`} onClick={()=>{setContextState({ newValue: producto, type: "SET_PRODUCTOS" })}}>Agregar</Link>
+          
+          <div className="Centrar">
+          <Link to={`/Productos`} onClick={()=>{setContextState({ newValue: producto, type: "SET_PRODUCTOS" })}}><div className="botonproducto"><button>Agregar</button></div></Link>
+          
+          </div>
+          
         </div>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-      </div>
+        <div className="Link">
+          
+        </div>
+        <br></br><br></br><br></br><br></br>
+        </div>
+        
     );
   } else {
     return <div>Producto no encontrado</div>;
